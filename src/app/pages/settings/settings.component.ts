@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { BlockchainService } from 'src/app/services/blockchain.service';
+
+@Component({
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.scss']
+})
+export class SettingsComponent {
+
+  public blockchain;
+
+  constructor(private blockchainService: BlockchainService){
+    this.blockchain = blockchainService.blockchainInstance;
+
+  }
+
+}
